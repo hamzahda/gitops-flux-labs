@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: quote-api
-        image: gcr.io/acn-devops-upskilling-gcp/quote-api-hamza:0.0.2
+        image: gcr.io/acn-devops-upskilling-gcp/quote-api-hamza:0.0.2 # {"$imagepolicy": "flux-system:quote-api"}
         imagePullPolicy: Always
         env:
           - name: QUOTE_API_USER
