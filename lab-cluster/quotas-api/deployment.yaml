@@ -19,5 +19,15 @@ spec:
       - name: quote-api
         image: gcr.io/acn-devops-upskilling-gcp/quote-api-hamza:0.0.2
         imagePullPolicy: Always
+        env:
+          - name: QUOTE_API_USER
+            valueFrom:
+              secretKeyRef:
+                name: basic-auth
+                key: user
+          - name: QUOTE_API_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: basic-auth
+                key: password
 
-        
