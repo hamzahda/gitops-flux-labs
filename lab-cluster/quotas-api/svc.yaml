@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: quote-api
+  namespace: quote-api
+  labels:
+    app: quote-api
+spec:
+  ports:
+  - protocol: TCP
+    port: 5000
+    targetPort: 5000
+  selector:
+    app: quote-api
+  type: ClusterIP
